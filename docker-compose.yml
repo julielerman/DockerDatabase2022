@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  agilistaapi:
+    image: ${DOCKER_REGISTRY-}api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings:DB_Conn=${DB_Conn}
+    ports:
+      - 5114:5114
+    depends_on:
+      - migration
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "P@ssword1"
+      ACCEPT_EULA: "Y" 
+    ports:
+      - "1630:1433" 
+  migration:
+    image: flyway/flyway:8.5.2
+    container_name: flyway_migration_julie
+    volumes:
+    - ./flyway/sql:/flyway/sql
+    - ./flyway/bin:/flyway/bin
+    entrypoint: ["flyway","migrate"]      
+    command:  -user=sa -password=P@ssword1 -mixed=true -connectRetries=20 -url=jdbc:sqlserver://db;databaseName=master;
+    depends_on:
+      - db

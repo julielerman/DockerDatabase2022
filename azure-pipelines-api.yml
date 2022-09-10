@@ -1,0 +1,54 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- Test-Master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+variables:
+  buildConfiguration: 'Release'
+
+steps:
+#- script: dotnet build --configuration $(buildConfiguration)
+# displayName: 'dotnet build $(buildConfiguration)'
+  
+# Docker Compose
+# Build, push or run multi-container Docker applications. Task can be used with Docker or Azure Container registry.
+- task: DockerCompose@0
+  displayName: 'Build all containers in api compose file'
+  inputs:
+    dockerComposeFile: docker-compose.yml
+    action: Run a Docker Compose command
+    dockerComposeCommand: build
+
+- task: DockerCompose@0
+  displayName: 'Start up SQL Server Container'
+  inputs:
+    dockerComposeFile: docker-compose.yml
+    action: Run a Docker Compose command
+    dockerComposeCommand: up -d db
+
+- task: DockerCompose@0
+  displayName: 'Apply Schema Migrations'
+  inputs:
+    dockerComposeFile: docker-compose.yml
+    action: Run a Docker Compose command
+    dockerComposeCommand: up migration
+
+- task: DockerCompose@0
+  displayName: 'Run API'
+  inputs:
+    dockerComposeFile: docker-compose.yml
+    action: Run a Docker Compose command
+    dockerComposeCommand: up agilistaapi
+  
+- script: |
+    #docker build ./flyway -t $(dockerId)/$(imageName)
+    #docker login -u $(dockerId) -p $(dockerPassword)
+    #docker push $(dockerId)/ignite-apply-sql-updates-job
+  workingDirectory: '$(modulePath)'
+  displayName: 'Build, Login, Push SQL Kuberentes Job'

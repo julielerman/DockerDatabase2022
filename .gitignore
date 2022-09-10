@@ -1,0 +1,12 @@
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+Agilistas/API/obj/*
+Agilistas/ModelTests/obj/*
+Agilistas/API/bin/*
+Agilistas/ModelTests/bin/*
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
