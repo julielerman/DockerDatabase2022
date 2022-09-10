@@ -12,6 +12,7 @@ services:
       - 5114:5114
     depends_on:
       - migration
+    
   db:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:

@@ -61,8 +61,23 @@ namespace ModelTests {
             // Assert
             response.EnsureSuccessStatusCode (); // Status Code 200-299
             var result = JsonConvert.DeserializeObject<List<Agilista>> (response.Content.ReadAsStringAsync ().Result);
+            Assert.Single (result.Where (a => a.Name == "Lisa Crispin").ToList ());
+        }
+        [Theory]
+        [InlineData ("/api/agilistas")]
+          public async Task AgilistasControllerDefaultIncludesNewPropertyAndData (string url) {
+            // Arrange
+            var client = _factory.CreateClient ();
 
-            Assert.Single (result.Where (a => a.Name == "Julie Lerman").ToList ());
+            // Act
+            var response = await client.GetAsync (url);
+
+            // Assert
+            response.EnsureSuccessStatusCode (); // Status Code 200-299
+            var result = JsonConvert.DeserializeObject<List<Agilista>> 
+              (response.Content.ReadAsStringAsync ().Result);
+            Assert.NotEmpty (result.Where (a => a.SecondaryFocus != null 
+              && a.SecondaryFocus.Description == "Exploratory Testing"));
         }
     }
 }
