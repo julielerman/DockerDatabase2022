@@ -18,7 +18,7 @@ public class AgilistaContext : DbContext {
 
     );
 
-    modelBuilder.Entity<Agilista> ().HasData (
+modelBuilder.Entity<Agilista> ().HasData (
       new { Id = new Guid ("5efdb55d-1205-419f-8a0b-9cc7a15f8565"), Name = "Lisa Crispin", PrimaryFocusId = new Guid ("167d1f6b-a93d-49e4-8a0d-e651369e018b") },
       new { Id = new Guid ("554be900-d1a4-4908-9d6a-5ef3ea05650e"), Name = "Janet Gregory", PrimaryFocusId = new Guid ("167d1f6b-a93d-49e4-8a0d-e651369e018b") },
       new { Id = new Guid ("f2e5fdba-daf9-43f0-8bde-9ed2562bd12a"), Name = "Maaret Pyhäjärvi", PrimaryFocusId = new Guid ("5f6d6f80-9f9a-469e-9036-07ecbb3971ea")},

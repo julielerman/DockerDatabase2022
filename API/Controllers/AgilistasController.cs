@@ -23,8 +23,7 @@ namespace Agilistas.Controllers {
         public async Task<ActionResult<IEnumerable<Agilista>>> GetAgilista () {
             //excess is in here for those using the demo because db is so easy to get wrong!
             try {
-                var results = await _context.Agilistas.Include (a => a.PrimaryFocus).ToListAsync ();
-                return results;
+             return await _context.Agilistas.Include (a => a.PrimaryFocus).Include (a => a.SecondaryFocus).ToListAsync ();
             } catch {
                 var conn = _context.Database.GetDbConnection ().ConnectionString;
                 throw new Exception ("the failed db connstring is: " + conn);
@@ -34,7 +33,7 @@ namespace Agilistas.Controllers {
         // GET: api/Agilistas/5
         [HttpGet ("{id}")]
         public async Task<ActionResult<Agilista>> GetAgilista (Guid id) {
-            var Agilista = await _context.Agilistas.Include (a => a.PrimaryFocus).FirstOrDefaultAsync (a => a.Id == id);
+            var Agilista = await _context.Agilistas.Include (a => a.PrimaryFocus).Include (a => a.SecondaryFocus).FirstOrDefaultAsync (a => a.Id == id);
 
             if (Agilista == null) {
                 return NotFound ();
