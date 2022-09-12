@@ -1,5 +1,7 @@
 # Docker Database 2022
-# DockerCon 2020
+
+Presented at DevReach 2022 Sept 12, 2022. 
+https://www.telerik.com/devreach
 
 Demo code from "Dev and Test Agility for your Database with Docker"
 This is an updated version for .NET 6 and also using latest version of Docker engine/compose etc, SQL Server 2019.
@@ -15,10 +17,10 @@ This will pull Microsoft's SQL Server image and Microsoft's .NET 6 & sdk, Flyway
 
 Be sure to cd to the Agilistas folder before running either of the docker-compose files.
 
-Stage-One Branch
+main Branch
 This is the "before", where we have a running containerized app
 
-Stage-Two Branch
+AfterModelChange Branch
 This is after there's been a small model change which also demands a change to the database schema and seed data. 
 
 See theurlist.com/lermandockercon2020  for links to references.
