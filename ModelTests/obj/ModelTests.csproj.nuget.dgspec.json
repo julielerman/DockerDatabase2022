@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/ModelTests/ModelTests.csproj": {}
+    "/Users/julialerman/Documents/GitHub/DockerDatabase2022/ModelTests/ModelTests.csproj": {}
   },
   "projects": {
-    "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj": {
+    "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj",
+        "projectUniqueName": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj",
         "projectName": "Agilistas",
-        "projectPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj",
-        "packagesPath": "/Users/julielerman/.nuget/packages/",
-        "outputPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/obj/",
+        "projectPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj",
+        "packagesPath": "/Users/julialerman/.nuget/packages/",
+        "outputPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/julielerman/.nuget/NuGet/NuGet.Config"
+          "/Users/julialerman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -48,7 +48,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.*, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
@@ -60,7 +60,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -82,37 +82,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/ModelTests/ModelTests.csproj": {
+    "/Users/julialerman/Documents/GitHub/DockerDatabase2022/ModelTests/ModelTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/ModelTests/ModelTests.csproj",
+        "projectUniqueName": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/ModelTests/ModelTests.csproj",
         "projectName": "ModelTests",
-        "projectPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/ModelTests/ModelTests.csproj",
-        "packagesPath": "/Users/julielerman/.nuget/packages/",
-        "outputPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/ModelTests/obj/",
+        "projectPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/ModelTests/ModelTests.csproj",
+        "packagesPath": "/Users/julialerman/.nuget/packages/",
+        "outputPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/ModelTests/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/julielerman/.nuget/NuGet/NuGet.Config"
+          "/Users/julialerman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj": {
-                "projectPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj"
+              "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj": {
+                "projectPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj"
               }
             }
           }
@@ -129,8 +129,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.Testing": {
               "target": "Package",
@@ -168,22 +168,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

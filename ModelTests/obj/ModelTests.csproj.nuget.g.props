@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">False</RestoreSuccess>
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
-    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/julielerman/.nuget/packages/</NuGetPackageRoot>
-    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/julielerman/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/julialerman/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/julialerman/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.9.1</NuGetToolVersion>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.10.0</NuGetToolVersion>
   </PropertyGroup>
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <SourceRoot Include="/Users/julielerman/.nuget/packages/" />
+    <SourceRoot Include="/Users/julialerman/.nuget/packages/" />
     <SourceRoot Include="/usr/local/share/dotnet/sdk/NuGetFallbackFolder/" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
@@ -20,9 +20,12 @@
     <Import Project="$(NuGetPackageRoot)microsoft.codecoverage/16.11.0/build/netstandard1.0/Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage/16.11.0/build/netstandard1.0/Microsoft.CodeCoverage.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk/16.11.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk/16.11.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets/6.0.1/buildTransitive/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.props" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.configuration.usersecrets/6.0.1/buildTransitive/netstandard2.0/Microsoft.Extensions.Configuration.UserSecrets.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.6/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore/8.0.6/buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">/Users/julielerman/.nuget/packages/xunit.analyzers/0.10.0</Pkgxunit_analyzers>
-    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">/Users/julielerman/.nuget/packages/newtonsoft.json/9.0.1</PkgNewtonsoft_Json>
+    <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">/Users/julialerman/.nuget/packages/xunit.analyzers/0.10.0</Pkgxunit_analyzers>
+    <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">/Users/julialerman/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">/Users/julialerman/.nuget/packages/newtonsoft.json/9.0.1</PkgNewtonsoft_Json>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/julialerman/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
   </PropertyGroup>
 </Project>

@@ -7,11 +7,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>test_api</RootNamespace>
     <!-- <InvariantGlobalization>false</InvariantGlobalization> -->
+ 
   </PropertyGroup>
 
+  
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-       <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+       <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.*" />
    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.*" />
   <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.*" />
   </ItemGroup>
