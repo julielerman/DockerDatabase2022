@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   agilistaapi:
     image: ${DOCKER_REGISTRY-}api
@@ -18,19 +16,19 @@ services:
       - migration
     
   db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       SA_PASSWORD: "P@ssword1"
       ACCEPT_EULA: "Y" 
     ports:
       - "1630:1433" 
   migration:
-    image: flyway/flyway:8.5.2
+    image: flyway/flyway:latest-alpine
     container_name: flyway_migration_julie
     volumes:
     - ./flyway/sql:/flyway/sql
     - ./flyway/bin:/flyway/bin
     entrypoint: ["flyway","migrate"]      
-    command:  -user=sa -password=P@ssword1 -mixed=true -connectRetries=20 -url=jdbc:sqlserver://db;databaseName=master;
+    command:  -user=sa -password=P@ssword1 -mixed=true -connectRetries=20 -url='jdbc:sqlserver://db;databaseName=master;trustServerCertificate=true;'
     depends_on:
       - db

@@ -22,15 +22,15 @@ namespace Agilistas.Controllers {
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Agilista>>> GetAgilista () {
       //excess is in here for those using the demo because db is so easy to get wrong!
-      try
-      {
+      // try
+      // {
         return await _context.Agilistas.Include (a => a.PrimaryFocus).Include (a => a.SecondaryFocus).ToListAsync ();
-      }
-       catch
-      {
-        var conn = _context.Database.GetDbConnection ().ConnectionString;
-        throw new Exception ("the failed db connstring is: " + conn);
-      }
+      // }
+      //  catch
+      // {
+      //   var conn = _context.Database.GetDbConnection ().ConnectionString;
+      //   throw new Exception ("the failed db connstring is: " + conn);
+      // }
     }
 
     // GET: api/Agilistas/5
