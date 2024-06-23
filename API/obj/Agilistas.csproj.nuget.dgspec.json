@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj": {}
+    "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj": {}
   },
   "projects": {
-    "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj": {
+    "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj",
+        "projectUniqueName": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj",
         "projectName": "Agilistas",
-        "projectPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj",
-        "packagesPath": "/Users/julielerman/.nuget/packages/",
-        "outputPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/obj/",
+        "projectPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj",
+        "packagesPath": "/Users/julialerman/.nuget/packages/",
+        "outputPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/julielerman/.nuget/NuGet/NuGet.Config"
+          "/Users/julialerman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

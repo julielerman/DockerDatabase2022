@@ -11,14 +11,14 @@ services:
     depends_on:
       - migration
   db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:latest
     environment:
       SA_PASSWORD: "P@ssword1"
       ACCEPT_EULA: "Y"
     ports:
       - "1620:1433"
   migration:
-    image: flyway/flyway:8.5.2
+    image: flyway/flyway:10.5.
     container_name: flyway_migration_julie
     volumes:
     - ./flyway/sql:/flyway/sql

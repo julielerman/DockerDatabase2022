@@ -2945,7 +2945,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kYURQyuVQUUbHWmR5Alcx/aQjf+ZRQvpLsc/lBPSfl+BhU4U2H86PJN589hByYYUj6RpJVotmxAiJmOAeH5uzA==",
+      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -2960,7 +2960,7 @@
       ]
     },
     "Microsoft.NETCore.Targets/1.1.0": {
-      "sha512": "MSkllbTqKj9FQWeaSNYiqpDh3/TiJYd2H2qT2fO4KQax9e3e1RzKqV1GWICei0ofEAWZ69sM5uyPIn1SnyQkVA==",
+      "sha512": "aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
       "type": "package",
       "path": "microsoft.netcore.targets/1.1.0",
       "files": [
@@ -3618,11 +3618,12 @@
       ]
     },
     "System.Runtime/4.3.0": {
-      "sha512": "HsazUXk3lrxxNvCxsERgj4GvAnghPFmrxIM8Y1v18v9VsrpD+BJi08yt1AwUKQBgYnZ4cwdqznn4B+hbNunY3w==",
+      "sha512": "JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
       "type": "package",
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4000,11 +4001,12 @@
       ]
     },
     "System.Text.Encoding/4.3.0": {
-      "sha512": "Le61e8r6Yi/COe6AvuFJMnkxejX3guZP2L08UTsVXce7tsdUAnHUzCi7RVIEd4gtetwLTxJZNZlHMdLVJfI5eg==",
+      "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4310,23 +4312,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/julielerman/.nuget/packages/": {},
+    "/Users/julialerman/.nuget/packages/": {},
     "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj",
+      "projectUniqueName": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj",
       "projectName": "Agilistas",
-      "projectPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/Agilistas.csproj",
-      "packagesPath": "/Users/julielerman/.nuget/packages/",
-      "outputPath": "/Users/julielerman/Dropbox/ConferenceStuff/Devreach 2022/Docker talk/Demo/Agilistas/API/obj/",
+      "projectPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/Agilistas.csproj",
+      "packagesPath": "/Users/julialerman/.nuget/packages/",
+      "outputPath": "/Users/julialerman/Documents/GitHub/DockerDatabase2022/API/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/julielerman/.nuget/NuGet/NuGet.Config"
+        "/Users/julialerman/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -4391,7 +4393,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
