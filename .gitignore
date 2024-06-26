@@ -7,6 +7,10 @@ Agilistas/API/obj/*
 Agilistas/ModelTests/obj/*
 Agilistas/API/bin/*
 Agilistas/ModelTests/bin/*
+DockerDatabase2022/API/obj/*
+DockerDatabase2022/ModelTests/obj/*
+DockerDatabase2022/API/bin/*
+DockerDatabase2022/ModelTests/bin/*
 .vscode/settings.json
 .vscode/launch.json
 .vscode/tasks.json
