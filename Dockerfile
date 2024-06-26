@@ -1,6 +1,11 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
 WORKDIR /app
 EXPOSE 5114
+#downside of using alpine: https://andrewlock.net/dotnet-core-docker-and-cultures-solving-culture-issues-porting-a-net-core-app-from-windows-to-linux/
+# Install cultures (same approach as Alpine SDK image)
+RUN apk add --no-cache icu-libs
+# Disable the invariant mode (set in base image)
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
 
 ENV ASPNETCORE_URLS=http://+:5114

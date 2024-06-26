@@ -1,5 +1,7 @@
 # This branch is a work in progress and not ready for primetime yet!! #
 
+Note: Alpine image does not have culture invariants installed and this creates a problem for how sqlclient makes calls. Note the fix in the API's DockerFile. Discovered via https://andrewlock.net/dotnet-core-docker-and-cultures-solving-culture-issues-porting-a-net-core-app-from-windows-to-linux/
+
 # Docker Database 2022
 
 Presented at DevReach 2022 Sept 12, 2022. 

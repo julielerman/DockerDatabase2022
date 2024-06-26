@@ -8,14 +8,14 @@ services:
     entrypoint: ["bash","ModelTests/entrypoint-tests.sh", "--timeout=30"] 
     depends_on:
       - migration
-  db-test:
-    image: mcr.microsoft.com/mssql/server:2022-
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
       SA_PASSWORD: "P@ssword1"
       ACCEPT_EULA: "Y"
     ports:
       - "1620:1433"
-  migration-test:
+  migration:
     image: flyway/flyway:latest-alpine
     container_name: flyway_migration_julie
     volumes:

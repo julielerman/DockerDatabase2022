@@ -6,8 +6,6 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>test_api</RootNamespace>
-    <!-- <InvariantGlobalization>false</InvariantGlobalization> -->
- 
   </PropertyGroup>
 
   

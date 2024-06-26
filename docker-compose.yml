@@ -14,7 +14,6 @@ services:
     
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
-    restart: always
     environment:
       SA_PASSWORD: "P@ssword1"
       ACCEPT_EULA: "Y" 
