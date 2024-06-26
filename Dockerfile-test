@@ -1,0 +1,20 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
+FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
+WORKDIR /src
+
+#downside of using alpine: https://andrewlock.net/dotnet-core-docker-and-cultures-solving-culture-issues-porting-a-net-core-app-from-windows-to-linux/
+# Install cultures (same approach as Alpine SDK image)
+RUN apk add --no-cache icu-libs
+# Disable the invariant mode (set in base image)
+ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
+
+# restore
+COPY ["./API/Agilistas.csproj", "API/"]
+RUN dotnet restore API/Agilistas.csproj
+COPY ./ModelTests/ModelTests.csproj ./ModelTests/
+RUN dotnet restore ModelTests/ModelTests.csproj
+
+# copy src
+COPY . .
+RUN chmod +x ModelTests/wait-for-it.sh
+RUN chmod +x ModelTests/entrypoint-tests.sh

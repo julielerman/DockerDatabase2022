@@ -1,0 +1,60 @@
+{
+  "configurations": [
+  {
+    "name": "Docker .NET Attach (Preview)",
+    "type": "docker",
+    "request": "attach",
+    "platform": "netCore",
+    "sourceFileMap": {
+      "/src": "${workspaceFolder}"
+    }
+  },
+    {
+      "name": "Docker .NET Core Launch",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "netCore": {
+        "appProject": "${workspaceFolder}/API/Agilistas.csproj",
+        "serverReadyAction": {
+          "action": "openExternally",
+          "webRoot": "api"
+        }
+      }
+    },
+    {
+      "name": ".NET Core Launch (web)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/API/bin/Debug/net8.0/Agilistas.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/API",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": ".NET Core Attach",
+      "type": "coreclr",
+      "request": "attach"
+    },
+    {
+      "name": "Docker .NET Launch",
+      "type": "docker",
+      "request": "launch",
+      "preLaunchTask": "docker-run: debug",
+      "netCore": {
+        "appProject": "${workspaceFolder}/API/Agilistas.csproj"
+      }
+    }
+  ]
+}
