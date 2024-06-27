@@ -29,6 +29,20 @@ UPDATE [Agilistas] SET [SecondaryFocusId] = 'c5b6a0e8-e43f-4765-906f-e15e019a19d
 WHERE [Id] = '83eda86f-daf9-43f0-8bde-9ed2562bd12a';
 SELECT @@ROWCOUNT;
 
+GO
+
+UPDATE [Agilistas] SET [SecondaryFocusId] = '0000000-0000-0000-0000-000000000000'
+WHERE [Id] = '70de119b-3860-42c4-8150-19c7d017c0b5';
+SELECT @@ROWCOUNT;
+
+GO
+
+UPDATE [Agilistas] SET [SecondaryFocusId] = '0000000-0000-0000-0000-000000000000'
+WHERE [Id] = 'f2e5fdba-daf9-43f0-8bde-9ed2562bd12a';
+SELECT @@ROWCOUNT;
+
+
+
 
 
 

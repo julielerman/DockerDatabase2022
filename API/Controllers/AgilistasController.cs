@@ -24,7 +24,8 @@ namespace Agilistas.Controllers {
       //excess is in here for those using the demo because db is so easy to get wrong!
       try
       {
-        return await _context.Agilistas.Include (a => a.PrimaryFocus).Include (a => a.SecondaryFocus).ToListAsync ();
+       return await _context.Agilistas.Include (a => a.PrimaryFocus).Include (a => a.SecondaryFocus).ToListAsync ();
+      //  return await _context.Agilistas.ToListAsync ();
       }
        catch (Exception ex)
       {

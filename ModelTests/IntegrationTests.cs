@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Agilistas;
-using Agilistas.Controllers;
 using AgilistaTracker;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace ModelTests {
+namespace ModelTests;
+
     //test controller action with database
     public class IntegrationTests : IClassFixture<WebApplicationFactory<Program>> {
         private readonly WebApplicationFactory<Program> _factory;
@@ -79,5 +76,4 @@ namespace ModelTests {
             Assert.NotEmpty (result.Where (a => a.SecondaryFocus != null 
               && a.SecondaryFocus.Description == "Exploratory Testing"));
         }
-    }
 }

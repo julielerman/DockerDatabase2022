@@ -21,7 +21,7 @@ services:
     volumes:
     - ./flyway/sql:/flyway/sql
     entrypoint: ["flyway","migrate"]      
-    command: -user=sa -password=P@ssword1 -mixed=true -connectRetries=20 -url=jdbc:sqlserver://db;database=master 
+    command:  -user=sa -password=P@ssword1 -mixed=true -connectRetries=20 -url='jdbc:sqlserver://db;databaseName=master;trustServerCertificate=true;'
     depends_on:
       - db
     

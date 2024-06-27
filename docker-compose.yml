@@ -11,7 +11,10 @@ services:
       - 5114:5114
     depends_on:
       - migration
-    
+    develop:
+      watch:
+        - action: rebuild
+          path: .
   db:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:

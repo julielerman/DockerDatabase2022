@@ -10,7 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var conn = builder.Configuration["ConnectionStrings:DB_Conn"];
 builder.Services.AddDbContext<AgilistaContext>
-(options=> options.UseSqlServer(conn));
+(options=> options.UseSqlServer(conn).LogTo(Console.WriteLine,LogLevel.Information));
     
 var app = builder.Build();
 
@@ -28,3 +28,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
